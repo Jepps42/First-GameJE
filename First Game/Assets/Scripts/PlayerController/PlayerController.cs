@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -35,5 +36,23 @@ public class PlayerController : MonoBehaviour
         }
         
         RB.velocity = vel;
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            Vector2 shotHeight = new Vector2(7, 2);
+            BallScript.Instance.Rigidbody.velocity = vel + shotHeight;
+            BallScript.Instance.transform.SetParent(null);
+            BallScript.Instance.Rigidbody.gravityScale = 1;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Bball")
+        {
+            BallScript.Instance.transform.SetParent(this.transform);
+            BallScript.Instance.Rigidbody.gravityScale = 0;
+            BallScript.Instance.Rigidbody.velocity = Vector2.zero;
+        }
     }
 }
