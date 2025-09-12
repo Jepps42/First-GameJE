@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public TextMeshProUGUI TimerText;
+
+
+    public float Timer = 60;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,5 +41,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         PlayerScore.text = "Score: " + PlayerScoreNum;
+
+        TimerText.text = "Timer: " + Timer;
+
+        Timer -= Time.deltaTime;
+        if (Timer <= 0)
+        {
+
+        }
     }
 }
