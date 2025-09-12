@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerScore.text = "Score: " + PlayerScoreNum;
 
-        TimerText.text = "Timer: " + Timer;
+        TimerText.text = "Time: " + (Mathf.Floor(Timer*10)/10);
 
         Timer -= Time.deltaTime;
         if (Timer <= 0)
