@@ -17,30 +17,30 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 vel = new Vector2(0, 0);
+        Vector2 pos  = transform.position;
         if (Input.GetKey(KeyCode.A))
         {
-            vel.x = -Speed;
+            pos.x -= Speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            vel.y = -Speed;
+            pos.y -= Speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            vel.x = Speed;
+            pos.x += Speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            vel.y = Speed;
+            pos.y += Speed * Time.deltaTime;
         }
         
-        RB.velocity = vel;
+        transform.position = pos;
 
         if (Input.GetKey(KeyCode.E))
         {
-            Vector2 shotHeight = new Vector2(7, 2);
-            BallScript.Instance.Rigidbody.velocity = vel + shotHeight;
+            Vector2 shotHeight = new Vector2(10, 4);
+            BallScript.Instance.Rigidbody.velocity = pos + shotHeight;
             BallScript.Instance.transform.SetParent(null);
             BallScript.Instance.Rigidbody.gravityScale = 1;
         }
