@@ -14,6 +14,7 @@ public class BallScript : MonoBehaviour
 
     public Rigidbody2D Rigidbody;
 
+    private bool ThreePointRange = false;
     private void Awake()
     {
         Rigidbody = this.GetComponent<Rigidbody2D>();
@@ -33,7 +34,15 @@ public class BallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Write a code that checks if the ball is in range for 3-pointer
+        /*if (Ball = )
+        {
+            ThreePointRange = true;
+        }*/
+
+        //Write a code that gives the player 3 points if the ball was shot in 3-point range
         
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
