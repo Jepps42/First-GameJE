@@ -15,6 +15,8 @@ public class BallScript : MonoBehaviour
     public Rigidbody2D Rigidbody;
 
     private bool ThreePointRange;
+
+    //private int ThreePointer = Random.Range(-9, 1);
     private void Awake()
     {
         Rigidbody = this.GetComponent<Rigidbody2D>();
@@ -38,10 +40,13 @@ public class BallScript : MonoBehaviour
         /*if (Ball = )
         {
             ThreePointRange = true;
-        }*/
-
-        //Write a code that gives the player 3 points if the ball was shot in 3-point range
+        }
         
+        //Write a code that gives the player 3 points if the ball was shot in 3-point range
+        if (ThreePointer = true)
+        {
+            GameManager.Instance.PlayerScoreNum
+        }*/
 
     }
 
