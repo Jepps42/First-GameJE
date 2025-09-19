@@ -14,7 +14,7 @@ public class BallScript : MonoBehaviour
 
     public Rigidbody2D Rigidbody;
 
-    private bool ThreePointRange = false;
+    private bool ThreePointRange;
     private void Awake()
     {
         Rigidbody = this.GetComponent<Rigidbody2D>();
