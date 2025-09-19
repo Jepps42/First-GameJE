@@ -894,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162798174642724090, guid: 6610fa58e2997ee439e6a80bb687fad4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.59
+      value: -9.26
       objectReference: {fileID: 0}
     - target: {fileID: 7162798174642724090, guid: 6610fa58e2997ee439e6a80bb687fad4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   PlayerScore: {fileID: 1964582343}
   PlayerScoreNum: 0
   TimerText: {fileID: 1954117981}
-  Timer: 4.9
+  Timer: 60
 --- !u!4 &2146242155
 Transform:
   m_ObjectHideFlags: 0

@@ -14,9 +14,9 @@ public class BallScript : MonoBehaviour
 
     public Rigidbody2D Rigidbody;
 
-    private bool ThreePointRange;
+    public bool ThreePointRange;
 
-    //private int ThreePointer = Random.Range(-9, 1);
+    public float ThreePointer = 1;
     private void Awake()
     {
         Rigidbody = this.GetComponent<Rigidbody2D>();
@@ -37,16 +37,10 @@ public class BallScript : MonoBehaviour
     void Update()
     {
         //Write a code that checks if the ball is in range for 3-pointer
-        /*if (Ball = )
-        {
-            ThreePointRange = true;
-        }
+        
         
         //Write a code that gives the player 3 points if the ball was shot in 3-point range
-        if (ThreePointer = true)
-        {
-            GameManager.Instance.PlayerScoreNum
-        }*/
+        
 
     }
 
@@ -54,9 +48,16 @@ public class BallScript : MonoBehaviour
     {
         if (collision.transform.tag == "Net")
         {
-            GameManager.Instance.PlayerScoreNum++;
+            GameManager.Instance.PlayerScoreNum += 2;
             this.gameObject.transform.position = Vector2;
             this.gameObject.transform.SetParent(null);
+
+            if (ThreePointRange == true)
+            {
+                
+                GameManager.Instance.PlayerScoreNum += 3;
+            }
+            
         }
     }
 }
