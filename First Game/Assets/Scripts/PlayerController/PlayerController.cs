@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
         {
-            Vector2 shotHeight = new Vector2(13, 10);
+            Vector2 shotHeight = new Vector2(15, 15);
             BallScript.Instance.Rigidbody.velocity = pos + shotHeight;
             BallScript.Instance.transform.SetParent(null);
             BallScript.Instance.Rigidbody.gravityScale = 1;

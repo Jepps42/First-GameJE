@@ -16,7 +16,7 @@ public class BallScript : MonoBehaviour
 
     public bool ThreePointRange;
 
-    public float ThreePointer = 1;
+    public float ThreePointer = -9;
     private void Awake()
     {
         Rigidbody = this.GetComponent<Rigidbody2D>();
@@ -48,7 +48,6 @@ public class BallScript : MonoBehaviour
     {
         if (collision.transform.tag == "Net")
         {
-            GameManager.Instance.PlayerScoreNum += 2;
             this.gameObject.transform.position = Vector2;
             this.gameObject.transform.SetParent(null);
 
@@ -57,7 +56,10 @@ public class BallScript : MonoBehaviour
                 
                 GameManager.Instance.PlayerScoreNum += 3;
             }
-            
+            else
+            {
+                GameManager.Instance.PlayerScoreNum += 2;
+            }
         }
     }
 }
