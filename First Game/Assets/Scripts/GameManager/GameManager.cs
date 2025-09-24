@@ -14,9 +14,10 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI TimerText;
 
+    //public TextMeshProUGUI YouLose;
+
 
     public float Timer = 60;
-
 
     private void Awake()
     {
@@ -44,6 +45,8 @@ public class GameManager : MonoBehaviour
         PlayerScore.text = "Score: " + PlayerScoreNum;
 
         TimerText.text = "Time: " + (Mathf.Floor(Timer*10)/10);
+
+        //YouLose.text = "Congrats, your score was: " + PlayerScoreNum;
 
         Timer -= Time.deltaTime;
         if (Timer <= 0)
