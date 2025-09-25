@@ -51,6 +51,8 @@ public class BallScript : MonoBehaviour
             this.gameObject.transform.position = Vector2;
             this.gameObject.transform.SetParent(null);
 
+
+
             if (ThreePointRange == true)
             {
                 
